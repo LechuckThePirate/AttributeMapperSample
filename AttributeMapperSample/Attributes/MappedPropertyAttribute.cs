@@ -6,6 +6,5 @@ namespace AttributeMapperSample.Attributes
     public class MappedPropertyAttribute : Attribute
     {
         public string MapTo { get; set; }
-        public Type MapperClass { get; set; }
     }
 }

@@ -5,16 +5,12 @@ namespace AttributeMapperSample.Attributes
     [AttributeUsage(AttributeTargets.Class)]
     public class MappableClassAttribute : Attribute
     {
-        public Type TargetType { get; set; }
-        public Type SourceType { get; set; }
+        private readonly Type _associatedType;
+        public Type AssociatedType { get { return _associatedType; } }
 
         public MappableClassAttribute(Type sourceAndTargetType)
         {
-            TargetType = sourceAndTargetType;
-            SourceType = sourceAndTargetType;
+            _associatedType = sourceAndTargetType;
         }
-
-        public MappableClassAttribute() { }
-
     }
 }
