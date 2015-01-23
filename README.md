@@ -1,6 +1,22 @@
 # README #
 
-This project is a sample for a simple entity mapper using custom attributes.
+This project is a sample for a simple entity mapper using custom attributes. 
+
+The idea is to have a little utility to map values from your DTO or POCO entities to viewmodels without having to type assignments for every field, and without tampering with the POCO entities... 
+
+By using custom attributes you assign to your viewmodel it's POCO class and it's properties the "brother" property in the POCO entity.
+
+It works both sides:
+
+```
+#!c#
+
+MyPOCO entity = viewModel.MapTo<MyPOCO>();
+
+ViewModel myModel = pocoEntity.MapTo<ViewModel>();
+
+```
+
 
 ### What is this repository for? ###
 
